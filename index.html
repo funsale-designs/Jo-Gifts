@@ -2,105 +2,132 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jo Gifts - Custom Gifts & Clothing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jo Gifts - Home</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #fff7fb;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff8f0;
       color: #333;
     }
-    header {
-      background: #ff4da6;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
+
     nav {
-      background: #ffe6f0;
+      background-color: #ff4f81;
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
-      padding: 0.5rem 0;
-    }
-    nav a {
-      color: #ff3399;
-      text-decoration: none;
+      gap: 2rem;
+      padding: 1rem;
       font-weight: bold;
     }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
     nav a:hover {
       text-decoration: underline;
     }
+
+    header {
+      background-color: #fff0f5;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      color: #ff4f81;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
     section {
       padding: 2rem;
-      text-align: center;
+      max-width: 800px;
+      margin: auto;
     }
-    .gallery img {
-      max-width: 200px;
-      margin: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    h2 {
+      color: #ff4f81;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
     }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
     footer {
-      background: #ff4da6;
+      background-color: #ff4f81;
       color: white;
-      padding: 1rem;
       text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
     }
-    .whatsapp-button {
-      display: inline-block;
-      background-color: #25D366;
-      color: white;
-      padding: 0.8rem 1.2rem;
-      margin-top: 1rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>🎁 Jo Gifts 🎉</h1>
-    <p>Where Ordinary Becomes Extra-Ordinary</p>
-  </header>
-  
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-  </nav>
 
-  <section id="home">
-    <h2>Welcome to Jo Gifts!</h2>
-    <p>Custom gifts, funky clothing, keychains, hats, and more. Vinyl & sublimation magic for any occasion.</p>
-  </section>
+<!-- Navigation -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>We don’t just make gifts — we create moments. Whether it’s bold sublimation or sleek vinyl finishes, our creative crew brings sparkle to every piece. Contact us for birthdays, launches, weddings, and more!</p>
-  </section>
+<!-- Hero / Intro -->
+<header>
+  <h1>🎁 Welcome to Jo Gifts 🎉</h1>
+  <p>Where custom creativity meets memorable moments — from unique clothing and gift sets to glassware and goodies, we bring your ideas to life!</p>
+</header>
 
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <img src="https://via.placeholder.com/200x200?text=Gift+1" alt="Gift 1">
-      <img src="https://via.placeholder.com/200x200?text=Gift+2" alt="Gift 2">
-      <img src="https://via.placeholder.com/200x200?text=Gift+3" alt="Gift 3">
-    </div>
-  </section>
+<!-- About Section -->
+<section>
+  <h2>Our Creations</h2>
+  <p>At Jo Gifts, we specialize in custom-made items designed to brighten every occasion. From stylish apparel and thoughtful hampers to personalized keychains and glassware, every product is crafted with care and a splash of fun. Whether it's a birthday, wedding, corporate event, or “just because” moment — we’re here to help you celebrate.</p>
+</section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>📍 Vaalpark, South Africa</p>
-    <p>📞 WhatsApp us now!</p>
-    <a class="whatsapp-button" href="https://wa.me/27727155929" target="_blank">Chat on WhatsApp</a>
-  </section>
+<!-- Delivery Info Section -->
+<section>
+  <h2>Delivery & Pickup</h2>
+  <p>Delivery and pickup options will be discussed upon order placement to ensure the most convenient arrangement for you.</p>
+</section>
 
-  <footer>
-    <p>© 2025 Jo Gifts | All rights reserved</p>
-  </footer>
+<!-- Contact Section -->
+<section>
+  <h2>Contact Us</h2>
+  <p>Ready to order or have a question? Reach out to us directly via WhatsApp or email:</p>
+  <ul>
+    <li><strong>WhatsApp:</strong> <a href="https://wa.me/27727155929">072 715 5929</a></li>
+    <li><strong>Email:</strong> <a href="mailto:jogifts@example.com">jogifts@example.com</a></li>
+    <li><strong>Location:</strong> Vaalpark, South Africa</li>
+  </ul>
+</section>
+
+<!-- Footer -->
+<footer>
+  &copy; 2025 Jo Gifts. All rights reserved.
+</footer>
+
 </body>
 </html>
