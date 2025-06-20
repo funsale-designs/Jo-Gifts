@@ -54,7 +54,7 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
       padding: 2rem;
-      max-width: 1000px;
+      max-width: 1300px;
       margin: auto;
     }
 
@@ -65,12 +65,18 @@
       overflow: hidden;
       padding: 1rem;
       text-align: center;
+      cursor: pointer;
     }
 
     .product-card img {
       max-width: 100%;
       height: auto;
       border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover img {
+      transform: scale(1.02);
     }
 
     .product-card h3 {
@@ -90,6 +96,24 @@
       text-align: center;
       padding: 1rem;
       margin-top: 2rem;
+    }
+
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #000;
     }
 
     @media (max-width: 600px) {
@@ -121,34 +145,89 @@
 <!-- Header -->
 <header>
   <h1>Bits & Bobs</h1>
-  <p>All the little things that make a big impression ✨</p>
+  <p>The small things that bring big smiles ✨</p>
 </header>
 
-<!-- Products -->
+<!-- Product Grid -->
 <div class="products">
-  <div class="product-card">
-    <img src="images/keychain.jpg" alt="Custom Keychain">
-    <h3>Keychains</h3>
-    <p>Choose from names, initials, glitter styles, or themed shapes — perfect for favors or personal use.</p>
+
+  <div class="product-card" onclick="openLightbox('images/Bottle1.jpg')">
+    <img src="images/Bottle1.jpg" alt="Bottle 1">
+    <h3>Personalized Bottle</h3>
+    <p>Stay hydrated in style — with your name or logo!</p>
   </div>
 
-  <div class="product-card">
-    <img src="images/magnet.jpg" alt="Fridge Magnet">
-    <h3>Fridge Magnets</h3>
-    <p>Fun and functional — your favorite photos or designs made into cute fridge magnets.</p>
+  <div class="product-card" onclick="openLightbox('images/Bottle2.jpg')">
+    <img src="images/Bottle2.jpg" alt="Bottle 2">
+    <h3>Custom Sipper</h3>
+    <p>Leak-proof and vibrant — pick your print!</p>
   </div>
 
-  <div class="product-card">
-    <img src="images/stickers.jpg" alt="Custom Stickers">
-    <h3>Stickers & Labels</h3>
-    <p>Great for branding, events, and gift tags — available in custom shapes and styles.</p>
+  <div class="product-card" onclick="openLightbox('images/Father1.jpg')">
+    <img src="images/Father1.jpg" alt="Father's Day 1">
+    <h3>Father’s Day Frame</h3>
+    <p>Celebrate Dad with a message that lasts forever.</p>
   </div>
+
+  <div class="product-card" onclick="openLightbox('images/Father2.jpg')">
+    <img src="images/Father2.jpg" alt="Father's Day 2">
+    <h3>Dad’s Mug</h3>
+    <p>Best Dad ever? Let the mug say it proudly ☕</p>
+  </div>
+
+  <div class="product-card" onclick="openLightbox('images/Father3.jpg')">
+    <img src="images/Father3.jpg" alt="Father's Day 3">
+    <h3>Custom Keyholder</h3>
+    <p>Engraved key holder for his everyday essentials.</p>
+  </div>
+
+  <div class="product-card" onclick="openLightbox('images/Key1.jpg')">
+    <img src="images/Key1.jpg" alt="Keyring 1">
+    <h3>Personal Keyring</h3>
+    <p>Add initials, names, or shapes — great as party favours!</p>
+  </div>
+
+  <div class="product-card" onclick="openLightbox('images/Key2.jpg')">
+    <img src="images/Key2.jpg" alt="Keyring 2">
+    <h3>Quote Keyring</h3>
+    <p>Daily inspiration on a custom keepsake.</p>
+  </div>
+
+  <div class="product-card" onclick="openLightbox('images/Napkin1.jpg')">
+    <img src="images/Napkin1.jpg" alt="Napkin 1">
+    <h3>Wedding Napkin</h3>
+    <p>Monogrammed for elegance and memories.</p>
+  </div>
+
+  <div class="product-card" onclick="openLightbox('images/Napkin2.jpg')">
+    <img src="images/Napkin2.jpg" alt="Napkin 2">
+    <h3>Printed Serviette</h3>
+    <p>Customize with names, events, or special notes.</p>
+  </div>
+
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Zoomed Item">
 </div>
 
 <!-- Footer -->
 <footer>
   &copy; 2025 Jo Gifts. All rights reserved.
 </footer>
+
+<!-- Lightbox Script -->
+<script>
+  function openLightbox(imageSrc) {
+    document.getElementById('lightbox-img').src = imageSrc;
+    document.getElementById('lightbox').style.display = 'flex';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+</script>
 
 </body>
 </html>
