@@ -54,7 +54,7 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
       padding: 2rem;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
     }
 
@@ -65,12 +65,18 @@
       overflow: hidden;
       padding: 1rem;
       text-align: center;
+      cursor: pointer;
     }
 
     .product-card img {
       max-width: 100%;
       height: auto;
       border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover img {
+      transform: scale(1.02);
     }
 
     .product-card h3 {
@@ -90,6 +96,25 @@
       text-align: center;
       padding: 1rem;
       margin-top: 2rem;
+    }
+
+    /* Lightbox Styles */
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #000;
     }
 
     @media (max-width: 600px) {
@@ -121,34 +146,78 @@
 <!-- Header -->
 <header>
   <h1>Custom Balloons</h1>
-  <p>Bring your party to life with our unique balloon designs!</p>
+  <p>Floating fun for every celebration 🎈</p>
 </header>
 
 <!-- Product Grid -->
 <div class="products">
-  <div class="product-card">
-    <img src="images/balloon-bouquet.jpg" alt="Balloon Bouquet">
-    <h3>Balloon Bouquets</h3>
-    <p>Colorful bundles for birthdays, baby showers, and celebrations — personalized with names or messages.</p>
+
+  <!-- Repeat this block for each balloon -->
+  <div class="product-card" onclick="openLightbox('images/Bal1.jpg')">
+    <img src="images/Bal1.jpg" alt="Balloon 1">
+    <h3>Pink Bouquet</h3>
+    <p>Perfect for birthdays, baby showers, or just to show some love!</p>
   </div>
 
-  <div class="product-card">
-    <img src="images/helium-balloon.jpg" alt="Helium Balloons">
-    <h3>Helium Balloons</h3>
-    <p>Floating fun! Available in shapes, numbers, and themed designs for all ages.</p>
+  <div class="product-card" onclick="openLightbox('images/Bal2.jpg')">
+    <img src="images/Bal2.jpg" alt="Balloon 2">
+    <h3>Happy Birthday Set</h3>
+    <p>Bright and bold balloon bundle that brings the party vibe!</p>
   </div>
 
-  <div class="product-card">
-    <img src="images/clear-bubble.jpg" alt="Personalized Bubble Balloon">
-    <h3>Personalized Bubble Balloons</h3>
-    <p>Large clear balloons filled with confetti, feathers, or mini balloons — finished with your custom text!</p>
+  <div class="product-card" onclick="openLightbox('images/Bal3.jpg')">
+    <img src="images/Bal3.jpg" alt="Balloon 3">
+    <h3>Clear Confetti Balloon</h3>
+    <p>Filled with fun! Add a name or message for a personal touch.</p>
   </div>
+
+  <div class="product-card" onclick="openLightbox('images/Bal4.jpg')">
+    <img src="images/Bal4.jpg" alt="Balloon 4">
+    <h3>Pastel Rainbow</h3>
+    <p>Soft colors for a dreamy display — loved for baby events.</p>
+  </div>
+
+  <div class="product-card" onclick="openLightbox('images/Bal5.jpg')">
+    <img src="images/Bal5.jpg" alt="Balloon 5">
+    <h3>Custom Text Bubble</h3>
+    <p>Your message, your way — clear balloons with sparkle inside.</p>
+  </div>
+
+  <div class="product-card" onclick="openLightbox('images/Bal6.jpg')">
+    <img src="images/Bal6.jpg" alt="Balloon 6">
+    <h3>Gold & Black Glam</h3>
+    <p>Stylish and bold — great for milestone birthdays and parties.</p>
+  </div>
+
+  <div class="product-card" onclick="openLightbox('images/Bal7.jpg')">
+    <img src="images/Bal7.jpg" alt="Balloon 7">
+    <h3>Balloon Stack</h3>
+    <p>Number or letter balloons stacked with flair — totally Insta-worthy!</p>
+  </div>
+
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Zoomed Balloon">
 </div>
 
 <!-- Footer -->
 <footer>
   &copy; 2025 Jo Gifts. All rights reserved.
 </footer>
+
+<!-- Script for Lightbox -->
+<script>
+  function openLightbox(imageSrc) {
+    document.getElementById('lightbox-img').src = imageSrc;
+    document.getElementById('lightbox').style.display = 'flex';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+</script>
 
 </body>
 </html>
