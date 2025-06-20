@@ -54,7 +54,7 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
       padding: 2rem;
-      max-width: 1000px;
+      max-width: 1300px;
       margin: auto;
     }
 
@@ -65,12 +65,18 @@
       overflow: hidden;
       padding: 1rem;
       text-align: center;
+      cursor: pointer;
     }
 
     .product-card img {
       max-width: 100%;
       height: auto;
       border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover img {
+      transform: scale(1.02);
     }
 
     .product-card h3 {
@@ -90,6 +96,24 @@
       text-align: center;
       padding: 1rem;
       margin-top: 2rem;
+    }
+
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #000;
     }
 
     @media (max-width: 600px) {
@@ -121,34 +145,54 @@
 <!-- Header -->
 <header>
   <h1>Custom Prints</h1>
-  <p>Make a statement with vibrant vinyl and sublimation designs!</p>
+  <p>Make it yours with bold, beautiful personalization 🎨</p>
 </header>
 
-<!-- Products -->
+<!-- Product Grid -->
 <div class="products">
-  <div class="product-card">
-    <img src="images/custom-shirt.jpg" alt="Custom Printed T-Shirt">
-    <h3>Printed T-Shirts</h3>
-    <p>Choose your color, style, and design! Great for birthdays, teams, or just expressing yourself.</p>
-  </div>
 
-  <div class="product-card">
-    <img src="images/printed-mug.jpg" alt="Custom Printed Mug">
-    <h3>Personalized Mugs</h3>
-    <p>Photos, quotes, logos — anything you want on a high-quality ceramic mug.</p>
-  </div>
+  <!-- 14 custom images -->
+  <!-- Just edit captions or add more if needed -->
+  <!-- Keep filenames consistent with your image folder -->
 
-  <div class="product-card">
-    <img src="images/printed-bag.jpg" alt="Custom Tote Bag">
-    <h3>Custom Tote Bags</h3>
-    <p>Reusable and stylish! Get your message or name printed in vinyl or sublimation.</p>
+  <!-- Loop for images -->
+  <!-- You can duplicate and rename easily if you get more images -->
+  <!-- START image loop -->
+  <!-- I’ll list all 14 here -->
+  <!-- You can update descriptions later if you'd like -->
+
+  <!-- Custom1.jpg to Custom14.jpg -->
+  <!-- Start inserting cards -->
+  ${Array.from({ length: 14 }, (_, i) => `
+  <div class="product-card" onclick="openLightbox('images/Custom${i + 1}.jpg')">
+    <img src="images/Custom${i + 1}.jpg" alt="Custom Print ${i + 1}">
+    <h3>Custom Design ${i + 1}</h3>
+    <p>High-quality print on your choice of product — made just for you!</p>
   </div>
+  `).join('')}
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Zoomed Print">
 </div>
 
 <!-- Footer -->
 <footer>
   &copy; 2025 Jo Gifts. All rights reserved.
 </footer>
+
+<!-- Lightbox Script -->
+<script>
+  function openLightbox(imageSrc) {
+    document.getElementById('lightbox-img').src = imageSrc;
+    document.getElementById('lightbox').style.display = 'flex';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+</script>
 
 </body>
 </html>
