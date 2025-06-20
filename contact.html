@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - Jo Gifts</title>
+  <title>Jo Gifts - Contact</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
+      font-family: 'Segoe UI', sans-serif;
       background: #fff8f0;
       color: #333;
     }
@@ -15,8 +15,9 @@
     nav {
       background-color: #ff4f81;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 2rem;
+      gap: 1.5rem;
       padding: 1rem;
       font-weight: bold;
     }
@@ -24,7 +25,7 @@
     nav a {
       color: white;
       text-decoration: none;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
     }
 
     nav a:hover {
@@ -33,13 +34,19 @@
 
     header {
       background-color: #fff0f5;
-      color: #ff4f81;
       text-align: center;
       padding: 2rem 1rem;
     }
 
     header h1 {
+      color: #ff4f81;
       font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #555;
     }
 
     section {
@@ -59,12 +66,13 @@
       line-height: 1.6;
     }
 
-    a {
+    a.contact-link {
       color: #ff4f81;
       text-decoration: none;
+      font-weight: bold;
     }
 
-    a:hover {
+    a.contact-link:hover {
       text-decoration: underline;
     }
 
@@ -81,6 +89,10 @@
         flex-direction: column;
         align-items: center;
       }
+
+      header h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
@@ -90,33 +102,37 @@
 <nav>
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
-  <a href="gallery.html">Gallery</a>
+  <a href="glassware.html">Glassware</a>
+  <a href="gift-sets.html">Gift Sets</a>
+  <a href="custom-prints.html">Custom Prints</a>
+  <a href="balloon.html">Balloon</a>
+  <a href="bits-and-bobs.html">Bits & Bobs</a>
   <a href="contact.html">Contact</a>
 </nav>
 
 <!-- Header -->
 <header>
-  <h1>Contact Us</h1>
+  <h1>Contact Jo Gifts</h1>
+  <p>We'd love to hear from you!</p>
 </header>
 
 <!-- Contact Info -->
 <section>
-  <h2>Let’s Chat</h2>
-  <p>Have a question, custom idea, or ready to place an order? We’d love to hear from you!</p>
+  <h2>Get in Touch</h2>
+  <p>Whether you have a question, a custom request, or you're ready to place an order — contact us any time:</p>
 
   <ul>
-    <li><strong>WhatsApp:</strong> <a href="https://wa.me/27727155929">072 715 5929</a></li>
-    <li><strong>Email:</strong> <a href="mailto:jogifts@example.com">jogifts@example.com</a></li>
+    <li><strong>WhatsApp:</strong> <a class="contact-link" href="https://wa.me/27727155929" target="_blank">072 715 5929</a></li>
+    <li><strong>Email:</strong> <a class="contact-link" href="mailto:jogifts@example.com">jogifts@example.com</a></li>
     <li><strong>Location:</strong> Vaalpark, South Africa</li>
   </ul>
 
-  <h2>Order Details</h2>
-  <p>Delivery and pickup options will be discussed upon order placement to suit your preferences and availability.</p>
+  <p>We'll get back to you as soon as possible. You dream it, we make it!</p>
 </section>
 
 <!-- Footer -->
 <footer>
-  &copy; 2025 Jo Gifts. Designed with passion in South Africa.
+  &copy; 2025 Jo Gifts. All rights reserved.
 </footer>
 
 </body>
