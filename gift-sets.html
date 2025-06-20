@@ -54,7 +54,7 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
       padding: 2rem;
-      max-width: 1000px;
+      max-width: 1300px;
       margin: auto;
     }
 
@@ -65,12 +65,18 @@
       overflow: hidden;
       padding: 1rem;
       text-align: center;
+      cursor: pointer;
     }
 
     .product-card img {
       max-width: 100%;
       height: auto;
       border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover img {
+      transform: scale(1.02);
     }
 
     .product-card h3 {
@@ -90,6 +96,24 @@
       text-align: center;
       padding: 1rem;
       margin-top: 2rem;
+    }
+
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #000;
     }
 
     @media (max-width: 600px) {
@@ -120,35 +144,110 @@
 
 <!-- Header -->
 <header>
-  <h1>Gift Sets</h1>
-  <p>Delightful bundles that show love in every detail 🎁</p>
+  <h1>Gift Sets & Hampers</h1>
+  <p>Gifts that say “wow” — perfectly packed, forever remembered 💝</p>
 </header>
 
 <!-- Product Grid -->
 <div class="products">
-  <div class="product-card">
-    <img src="images/self-care-set.jpg" alt="Self-Care Gift Set">
-    <h3>Self-Care Set</h3>
-    <p>Pamper someone special with bath bombs, scrubs, and a personalized towel in a beautiful box.</p>
+
+  <!-- Ham1.jpg to Ham12.jpg -->
+  <!-- Replace titles/descriptions later if needed -->
+  <div class="product-card" onclick="openLightbox('images/Ham1.jpg')">
+    <img src="images/Ham1.jpg" alt="Gift Set 1">
+    <h3>Luxury Hamper</h3>
+    <p>Includes bath salts, candles, sweets & a printed mug.</p>
   </div>
 
-  <div class="product-card">
-    <img src="images/snack-box.jpg" alt="Snack & Sweets Box">
-    <h3>Snack & Sweets Box</h3>
-    <p>Custom boxes filled with treats — perfect for birthdays, kids' parties, or thank-you gifts.</p>
+  <div class="product-card" onclick="openLightbox('images/Ham2.jpg')">
+    <img src="images/Ham2.jpg" alt="Gift Set 2">
+    <h3>Birthday Box</h3>
+    <p>Customized with age, message & matching items.</p>
   </div>
 
-  <div class="product-card">
-    <img src="images/baby-set.jpg" alt="Baby Welcome Set">
-    <h3>Baby Welcome Set</h3>
-    <p>Adorable bundle with a printed baby grow, soft toy, and name-tag — made with love!</p>
+  <div class="product-card" onclick="openLightbox('images/Ham3.jpg')">
+    <img src="images/Ham3.jpg" alt="Gift Set 3">
+    <h3>Spa Set</h3>
+    <p>Relaxation essentials in a personalized box.</p>
   </div>
+
+  <div class="product-card" onclick="openLightbox('images/Ham4.jpg')">
+    <img src="images/Ham4.jpg" alt="Gift Set 4">
+    <h3>Mini Sweet Treat</h3>
+    <p>Chocolate, sweets & sparkle — small but stunning!</p>
+  </div>
+
+  <div class="product-card" onclick="openLightbox('images/Ham5.jpg')">
+    <img src="images/Ham5.jpg" alt="Gift Set 5">
+    <h3>Gentleman’s Box</h3>
+    <p>Whiskey glass, socks, and personalized keyring.</p>
+  </div>
+
+  <div class="product-card" onclick="openLightbox('images/Ham6.jpg')">
+    <img src="images/Ham6.jpg" alt="Gift Set 6">
+    <h3>Thank You Pack</h3>
+    <p>Say thanks with goodies, notes & custom tags.</p>
+  </div>
+
+  <div class="product-card" onclick="openLightbox('images/Ham7.jpg')">
+    <img src="images/Ham7.jpg" alt="Gift Set 7">
+    <h3>Pastel Package</h3>
+    <p>Soft tones, lovely scents, and a personalized glass.</p>
+  </div>
+
+  <div class="product-card" onclick="openLightbox('images/Ham8.jpg')">
+    <img src="images/Ham8.jpg" alt="Gift Set 8">
+    <h3>Bright Celebration</h3>
+    <p>Colorful and bold — for birthdays or baby showers.</p>
+  </div>
+
+  <div class="product-card" onclick="openLightbox('images/Ham9.jpg')">
+    <img src="images/Ham9.jpg" alt="Gift Set 9">
+    <h3>Cozy Night In</h3>
+    <p>Hot chocolate, socks, snacks and scented goodies.</p>
+  </div>
+
+  <div class="product-card" onclick="openLightbox('images/Ham10.jpg')">
+    <img src="images/Ham10.jpg" alt="Gift Set 10">
+    <h3>Couple’s Box</h3>
+    <p>Matching items and love notes for sweethearts 💕</p>
+  </div>
+
+  <div class="product-card" onclick="openLightbox('images/Ham11.jpg')">
+    <img src="images/Ham11.jpg" alt="Gift Set 11">
+    <h3>Kids Surprise Box</h3>
+    <p>Playful toys, stickers, sweets — total joy!</p>
+  </div>
+
+  <div class="product-card" onclick="openLightbox('images/Ham12.jpg')">
+    <img src="images/Ham12.jpg" alt="Gift Set 12">
+    <h3>Deluxe Combo</h3>
+    <p>Everything in one: glassware, snacks, and prints.</p>
+  </div>
+
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Zoomed Gift Set">
 </div>
 
 <!-- Footer -->
 <footer>
   &copy; 2025 Jo Gifts. All rights reserved.
 </footer>
+
+<!-- Lightbox Script -->
+<script>
+  function openLightbox(imageSrc) {
+    document.getElementById('lightbox-img').src = imageSrc;
+    document.getElementById('lightbox').style.display = 'flex';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+</script>
 
 </body>
 </html>
