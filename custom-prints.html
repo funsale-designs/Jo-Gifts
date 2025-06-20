@@ -1,83 +1,224 @@
-<div class="product-card" onclick="openLightbox('images/Custom1.jpg')">
-  <img src="images/Custom1.jpg" alt="Custom Print 1">
-  <h3>Custom Design 1</h3>
-  <p>High-quality print on your choice of product — made just for you!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jo Gifts - Custom Prints</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff8f0;
+      color: #333;
+    }
+
+    nav {
+      background-color: #ff4f81;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.05rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background-color: #fff0f5;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      color: #ff4f81;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto 1rem auto;
+    }
+
+    .product-card h3 {
+      color: #ff4f81;
+      margin: 0 0 0.5rem 0;
+      font-size: 1.2rem;
+    }
+
+    .product-card p {
+      font-size: 0.95rem;
+      color: #555;
+      margin: 0;
+    }
+
+    footer {
+      background-color: #ff4f81;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="glassware.html">Glassware</a>
+  <a href="gift-sets.html">Gift Sets</a>
+  <a href="custom-prints.html">Custom Prints</a>
+  <a href="balloon.html">Balloon</a>
+  <a href="bits-and-bobs.html">Bits & Bobs</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- Header -->
+<header>
+  <h1>Custom Prints</h1>
+  <p>Make it yours with bold, beautiful personalization 🎨</p>
+</header>
+
+<!-- Products Grid -->
+<div class="products">
+
+  <div class="product-card">
+    <img src="images/Custom1.jpg" alt="Custom Print 1">
+    <h3>Custom Design 1</h3>
+    <p>High-quality print on your choice of product — made just for you!</p>
+  </div>
+
+  <div class="product-card">
+    <img src="images/Custom2.jpg" alt="Custom Print 2">
+    <h3>Custom Design 2</h3>
+    <p>High-quality print on your choice of product — made just for you!</p>
+  </div>
+
+  <div class="product-card">
+    <img src="images/Custom3.jpg" alt="Custom Print 3">
+    <h3>Custom Design 3</h3>
+    <p>High-quality print on your choice of product — made just for you!</p>
+  </div>
+
+  <div class="product-card">
+    <img src="images/Custom4.jpg" alt="Custom Print 4">
+    <h3>Custom Design 4</h3>
+    <p>High-quality print on your choice of product — made just for you!</p>
+  </div>
+
+  <div class="product-card">
+    <img src="images/Custom5.jpg" alt="Custom Print 5">
+    <h3>Custom Design 5</h3>
+    <p>High-quality print on your choice of product — made just for you!</p>
+  </div>
+
+  <div class="product-card">
+    <img src="images/Custom6.jpg" alt="Custom Print 6">
+    <h3>Custom Design 6</h3>
+    <p>High-quality print on your choice of product — made just for you!</p>
+  </div>
+
+  <div class="product-card">
+    <img src="images/Custom7.jpg" alt="Custom Print 7">
+    <h3>Custom Design 7</h3>
+    <p>High-quality print on your choice of product — made just for you!</p>
+  </div>
+
+  <div class="product-card">
+    <img src="images/Custom8.jpg" alt="Custom Print 8">
+    <h3>Custom Design 8</h3>
+    <p>High-quality print on your choice of product — made just for you!</p>
+  </div>
+
+  <div class="product-card">
+    <img src="images/Custom9.jpg" alt="Custom Print 9">
+    <h3>Custom Design 9</h3>
+    <p>High-quality print on your choice of product — made just for you!</p>
+  </div>
+
+  <div class="product-card">
+    <img src="images/Custom10.jpg" alt="Custom Print 10">
+    <h3>Custom Design 10</h3>
+    <p>High-quality print on your choice of product — made just for you!</p>
+  </div>
+
+  <div class="product-card">
+    <img src="images/Custom11.jpg" alt="Custom Print 11">
+    <h3>Custom Design 11</h3>
+    <p>High-quality print on your choice of product — made just for you!</p>
+  </div>
+
+  <div class="product-card">
+    <img src="images/Custom12.jpg" alt="Custom Print 12">
+    <h3>Custom Design 12</h3>
+    <p>High-quality print on your choice of product — made just for you!</p>
+  </div>
+
+  <div class="product-card">
+    <img src="images/Custom13.jpg" alt="Custom Print 13">
+    <h3>Custom Design 13</h3>
+    <p>High-quality print on your choice of product — made just for you!</p>
+  </div>
+
+  <div class="product-card">
+    <img src="images/Custom14.jpg" alt="Custom Print 14">
+    <h3>Custom Design 14</h3>
+    <p>High-quality print on your choice of product — made just for you!</p>
+  </div>
+
 </div>
 
-<div class="product-card" onclick="openLightbox('images/Custom2.jpg')">
-  <img src="images/Custom2.jpg" alt="Custom Print 2">
-  <h3>Custom Design 2</h3>
-  <p>High-quality print on your choice of product — made just for you!</p>
-</div>
+<footer>
+  &copy; 2025 Jo Gifts. All rights reserved.
+</footer>
 
-<div class="product-card" onclick="openLightbox('images/Custom3.jpg')">
-  <img src="images/Custom3.jpg" alt="Custom Print 3">
-  <h3>Custom Design 3</h3>
-  <p>High-quality print on your choice of product — made just for you!</p>
-</div>
-
-<div class="product-card" onclick="openLightbox('images/Custom4.jpg')">
-  <img src="images/Custom4.jpg" alt="Custom Print 4">
-  <h3>Custom Design 4</h3>
-  <p>High-quality print on your choice of product — made just for you!</p>
-</div>
-
-<div class="product-card" onclick="openLightbox('images/Custom5.jpg')">
-  <img src="images/Custom5.jpg" alt="Custom Print 5">
-  <h3>Custom Design 5</h3>
-  <p>High-quality print on your choice of product — made just for you!</p>
-</div>
-
-<div class="product-card" onclick="openLightbox('images/Custom6.jpg')">
-  <img src="images/Custom6.jpg" alt="Custom Print 6">
-  <h3>Custom Design 6</h3>
-  <p>High-quality print on your choice of product — made just for you!</p>
-</div>
-
-<div class="product-card" onclick="openLightbox('images/Custom7.jpg')">
-  <img src="images/Custom7.jpg" alt="Custom Print 7">
-  <h3>Custom Design 7</h3>
-  <p>High-quality print on your choice of product — made just for you!</p>
-</div>
-
-<div class="product-card" onclick="openLightbox('images/Custom8.jpg')">
-  <img src="images/Custom8.jpg" alt="Custom Print 8">
-  <h3>Custom Design 8</h3>
-  <p>High-quality print on your choice of product — made just for you!</p>
-</div>
-
-<div class="product-card" onclick="openLightbox('images/Custom9.jpg')">
-  <img src="images/Custom9.jpg" alt="Custom Print 9">
-  <h3>Custom Design 9</h3>
-  <p>High-quality print on your choice of product — made just for you!</p>
-</div>
-
-<div class="product-card" onclick="openLightbox('images/Custom10.jpg')">
-  <img src="images/Custom10.jpg" alt="Custom Print 10">
-  <h3>Custom Design 10</h3>
-  <p>High-quality print on your choice of product — made just for you!</p>
-</div>
-
-<div class="product-card" onclick="openLightbox('images/Custom11.jpg')">
-  <img src="images/Custom11.jpg" alt="Custom Print 11">
-  <h3>Custom Design 11</h3>
-  <p>High-quality print on your choice of product — made just for you!</p>
-</div>
-
-<div class="product-card" onclick="openLightbox('images/Custom12.jpg')">
-  <img src="images/Custom12.jpg" alt="Custom Print 12">
-  <h3>Custom Design 12</h3>
-  <p>High-quality print on your choice of product — made just for you!</p>
-</div>
-
-<div class="product-card" onclick="openLightbox('images/Custom13.jpg')">
-  <img src="images/Custom13.jpg" alt="Custom Print 13">
-  <h3>Custom Design 13</h3>
-  <p>High-quality print on your choice of product — made just for you!</p>
-</div>
-
-<div class="product-card" onclick="openLightbox('images/Custom14.jpg')">
-  <img src="images/Custom14.jpg" alt="Custom Print 14">
-  <h3>Custom Design 14</h3>
-  <p>High-quality print on your choice of product — made just for you!</p>
-</div>
+</body>
+</html>
