@@ -12,12 +12,20 @@
       color: #333;
     }
 
+    /* Logo styling */
+    .logo {
+      display: block;
+      margin: 0 auto;
+      max-width: 140px;
+      padding: 1rem 0 0.5rem;
+    }
+
     nav {
       background-color: #ff4f81;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1.5rem;
+      gap: 1rem;
       padding: 1rem;
       font-weight: bold;
     }
@@ -26,10 +34,13 @@
       color: white;
       text-decoration: none;
       font-size: 1.05rem;
+      padding: 0.5rem 1rem;
+      background-color: #ff6fa3;
+      border-radius: 8px;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      background-color: #ff8fbc;
     }
 
     header {
@@ -42,6 +53,11 @@
       color: #ff4f81;
       font-size: 2.2rem;
       margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #555;
     }
 
     section {
@@ -89,6 +105,11 @@
   </style>
 </head>
 <body>
+
+<!-- Logo -->
+<a href="index.html">
+  <img src="Juanita.png" alt="Jo Gifts Logo" class="logo">
+</a>
 
 <!-- Navigation -->
 <nav>
