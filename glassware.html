@@ -40,54 +40,32 @@
 
     header h1 {
       color: #ff4f81;
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       margin-bottom: 0.5rem;
     }
 
-    header p {
-      font-size: 1.2rem;
-      color: #555;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-      max-width: 1200px;
+    section {
+      padding: 2rem 1rem;
+      max-width: 1000px;
       margin: auto;
     }
 
-    .product-card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      overflow: hidden;
-      padding: 1rem;
-      text-align: center;
-      cursor: pointer;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
     }
 
-    .product-card img {
-      max-width: 100%;
+    .gallery img {
+      width: 100%;
       height: auto;
       border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       transition: transform 0.3s;
     }
 
-    .product-card:hover img {
-      transform: scale(1.02);
-    }
-
-    .product-card h3 {
-      color: #ff4f81;
-      margin-top: 1rem;
-      font-size: 1.2rem;
-    }
-
-    .product-card p {
-      font-size: 0.95rem;
-      color: #555;
+    .gallery img:hover {
+      transform: scale(1.03);
     }
 
     footer {
@@ -98,24 +76,6 @@
       margin-top: 2rem;
     }
 
-    .lightbox {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw; height: 100vh;
-      background: rgba(0,0,0,0.8);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-    }
-
-    .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 10px;
-      box-shadow: 0 0 20px #000;
-    }
-
     @media (max-width: 600px) {
       nav {
         flex-direction: column;
@@ -123,7 +83,7 @@
       }
 
       header h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
     }
   </style>
@@ -144,90 +104,29 @@
 
 <!-- Header -->
 <header>
-  <h1>Custom Glassware</h1>
-  <p>Stylish. Personalized. Perfect for any toast 🥂</p>
+  <h1>🍷 Glassware Collection</h1>
+  <p>Custom glassware that’s perfect for weddings, birthdays, corporate events and more!</p>
 </header>
 
-<!-- Product Grid -->
-<div class="products">
-
-  <div class="product-card" onclick="openLightbox('images/Glass1.jpg')">
-    <img src="images/Glass1.jpg" alt="Glass 1">
-    <h3>Cheers Champagne</h3>
-    <p>Elegant flute with gold vinyl text for celebration moments.</p>
+<!-- Gallery Section -->
+<section>
+  <div class="gallery">
+    <img src="Glass1.jpg" alt="Glassware 1">
+    <img src="Glass2.jpg" alt="Glassware 2">
+    <img src="Glass3.jpg" alt="Glassware 3">
+    <img src="Glass4.jpg" alt="Glassware 4">
+    <img src="Glass5.jpg" alt="Glassware 5">
+    <img src="Glass6.jpg" alt="Glassware 6">
+    <img src="Glass7.jpg" alt="Glassware 7">
+    <img src="Glass8.jpg" alt="Glassware 8">
+    <img src="Glass9.jpg" alt="Glassware 9">
   </div>
-
-  <div class="product-card" onclick="openLightbox('images/Glass2.jpg')">
-    <img src="images/Glass2.jpg" alt="Glass 2">
-    <h3>Monogram Mug</h3>
-    <p>Perfect gift for teachers, coworkers or yourself!</p>
-  </div>
-
-  <div class="product-card" onclick="openLightbox('images/Glass3.jpg')">
-    <img src="images/Glass3.jpg" alt="Glass 3">
-    <h3>His & Hers Set</h3>
-    <p>Stylish and romantic — pair it up for weddings or anniversaries.</p>
-  </div>
-
-  <div class="product-card" onclick="openLightbox('images/Glass4.jpg')">
-    <img src="images/Glass4.jpg" alt="Glass 4">
-    <h3>Name Tumblers</h3>
-    <p>Durable, fun, and fully personalized tumblers.</p>
-  </div>
-
-  <div class="product-card" onclick="openLightbox('images/Glass5.jpg')">
-    <img src="images/Glass5.jpg" alt="Glass 5">
-    <h3>Shot Glass Fun</h3>
-    <p>Engraved or printed — choose your party theme!</p>
-  </div>
-
-  <div class="product-card" onclick="openLightbox('images/Glass6.jpg')">
-    <img src="images/Glass6.jpg" alt="Glass 6">
-    <h3>Business Logo Glass</h3>
-    <p>Turn everyday items into branded merchandise.</p>
-  </div>
-
-  <div class="product-card" onclick="openLightbox('images/Glass7.jpg')">
-    <img src="images/Glass7.jpg" alt="Glass 7">
-    <h3>Custom Wine Glass</h3>
-    <p>Classic style with a twist — add your own text!</p>
-  </div>
-
-  <div class="product-card" onclick="openLightbox('images/Glass8.jpg')">
-    <img src="images/Glass8.jpg" alt="Glass 8">
-    <h3>Glitter Cup</h3>
-    <p>Shimmering cups with names or quotes — sparkly & fun!</p>
-  </div>
-
-  <div class="product-card" onclick="openLightbox('images/Glass9.jpg')">
-    <img src="images/Glass9.jpg" alt="Glass 9">
-    <h3>Etched Mason Jar</h3>
-    <p>Rustic charm with custom etching — perfect for farm-style vibes.</p>
-  </div>
-
-</div>
-
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img" src="" alt="Zoomed Glass">
-</div>
+</section>
 
 <!-- Footer -->
 <footer>
   &copy; 2025 Jo Gifts. All rights reserved.
 </footer>
-
-<!-- Lightbox Script -->
-<script>
-  function openLightbox(imageSrc) {
-    document.getElementById('lightbox-img').src = imageSrc;
-    document.getElementById('lightbox').style.display = 'flex';
-  }
-
-  function closeLightbox() {
-    document.getElementById('lightbox').style.display = 'none';
-  }
-</script>
 
 </body>
 </html>
