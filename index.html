@@ -12,13 +12,28 @@
       color: #333;
     }
 
+    header {
+      background-color: #fff0f5;
+      text-align: center;
+      padding: 1.5rem 1rem 1rem;
+    }
+
     header img {
-      width: 100%;
-      max-width: 250px;
+      max-width: 140px;
       height: auto;
+      margin: 0 auto 1rem;
       display: block;
-      margin: 0 auto;
-      padding: 1rem 0 0.5rem;
+    }
+
+    header h1 {
+      color: #ff4f81;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #555;
     }
 
     nav {
@@ -42,23 +57,6 @@
 
     nav a:hover {
       background-color: #ff8fbc;
-    }
-
-    header {
-      background-color: #fff0f5;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    header h1 {
-      color: #ff4f81;
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      color: #555;
     }
 
     section {
@@ -103,32 +101,26 @@
       margin-top: 2rem;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
       nav {
-        gap: 0.5rem;
-      }
-
-      nav a {
-        flex: 1 1 40%;
-        text-align: center;
+        flex-direction: column;
+        align-items: center;
       }
 
       header h1 {
         font-size: 2rem;
       }
     }
-
-    @media (max-width: 480px) {
-      nav a {
-        flex: 1 1 80%;
-      }
-    }
   </style>
 </head>
 <body>
 
-<!-- Logo at Top -->
-<img src="Juanita.png" alt="Jo Gifts Logo">
+<!-- Header -->
+<header>
+  <img src="Juanita.png" alt="Jo Gifts Logo">
+  <h1>🎁 WELCOME TO JO GIFTS 🎉</h1>
+  <p>Where custom creativity meets memorable moments — from unique clothing and gift sets to glassware and goodies, we bring your ideas to life!</p>
+</header>
 
 <!-- Navigation -->
 <nav>
@@ -141,12 +133,6 @@
   <a href="bits-and-bobs.html">Bits & Bobs</a>
   <a href="contact.html">Contact</a>
 </nav>
-
-<!-- Header -->
-<header>
-  <h1>🎁 WELCOME TO JO GIFTS 🎉</h1>
-  <p>Where custom creativity meets memorable moments — from unique clothing and gift sets to glassware and goodies, we bring your ideas to life!</p>
-</header>
 
 <!-- About Section -->
 <section>
@@ -176,7 +162,7 @@
 
 <!-- Footer -->
 <footer>
-  &copy; 2025 JO GIFTS. All rights reserved.
+  &copy; 2025 Jo Gifts. All rights reserved.
 </footer>
 
 </body>
