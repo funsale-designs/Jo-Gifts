@@ -40,24 +40,18 @@
 
     header h1 {
       color: #ff4f81;
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       margin-bottom: 0.5rem;
     }
 
-    header p {
-      font-size: 1.2rem;
-      color: #555;
-    }
-
     section {
-      padding: 2rem;
+      padding: 2rem 1rem;
       max-width: 800px;
       margin: auto;
     }
 
     h2 {
       color: #ff4f81;
-      font-size: 1.8rem;
       margin-bottom: 1rem;
     }
 
@@ -66,14 +60,21 @@
       line-height: 1.6;
     }
 
-    a.contact-link {
-      color: #ff4f81;
+    .whatsapp-button {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 20px;
+      margin-top: 1rem;
       text-decoration: none;
+      border-radius: 6px;
       font-weight: bold;
+      font-size: 1.05rem;
+      transition: background-color 0.3s ease;
     }
 
-    a.contact-link:hover {
-      text-decoration: underline;
+    .whatsapp-button:hover {
+      background-color: #1ebe5b;
     }
 
     footer {
@@ -91,7 +92,7 @@
       }
 
       header h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
     }
   </style>
@@ -112,22 +113,23 @@
 
 <!-- Header -->
 <header>
-  <h1>Contact Jo Gifts</h1>
-  <p>We'd love to hear from you!</p>
+  <h1>📞 Contact Us</h1>
+  <p>We're here to help bring your custom gift ideas to life!</p>
 </header>
 
-<!-- Contact Info -->
+<!-- Contact Info Section -->
 <section>
-  <h2>Get in Touch</h2>
-  <p>Whether you have a question, a custom request, or you're ready to place an order — contact us any time:</p>
+  <h2>Let's Chat</h2>
+  <p>Feel free to get in touch via WhatsApp or email. Whether you’re placing an order or just asking a question, we’d love to hear from you.</p>
 
   <ul>
-    <li><strong>WhatsApp:</strong> <a class="contact-link" href="https://wa.me/27727155929" target="_blank">072 715 5929</a></li>
-    <li><strong>Email:</strong> <a class="contact-link" href="mailto:jogifts@example.com">jogifts@example.com</a></li>
+    <li><strong>WhatsApp:</strong> <a href="https://wa.me/27727155929">072 715 5929</a></li>
+    <li><strong>Email:</strong> <a href="mailto:jogifts@example.com">jogifts@example.com</a></li>
     <li><strong>Location:</strong> Vaalpark, South Africa</li>
   </ul>
 
-  <p>We'll get back to you as soon as possible. You dream it, we make it!</p>
+  <!-- WhatsApp Button -->
+  <a class="whatsapp-button" href="https://wa.me/27727155929" target="_blank">📲 Message Us on WhatsApp</a>
 </section>
 
 <!-- Footer -->
