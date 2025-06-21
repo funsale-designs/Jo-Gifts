@@ -40,54 +40,32 @@
 
     header h1 {
       color: #ff4f81;
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       margin-bottom: 0.5rem;
     }
 
-    header p {
-      font-size: 1.2rem;
-      color: #555;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-      max-width: 1200px;
+    section {
+      padding: 2rem 1rem;
+      max-width: 1000px;
       margin: auto;
     }
 
-    .product-card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      overflow: hidden;
-      padding: 1rem;
-      text-align: center;
-      cursor: pointer;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
     }
 
-    .product-card img {
-      max-width: 100%;
+    .gallery img {
+      width: 100%;
       height: auto;
       border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       transition: transform 0.3s;
     }
 
-    .product-card:hover img {
-      transform: scale(1.02);
-    }
-
-    .product-card h3 {
-      color: #ff4f81;
-      margin-top: 1rem;
-      font-size: 1.2rem;
-    }
-
-    .product-card p {
-      font-size: 0.95rem;
-      color: #555;
+    .gallery img:hover {
+      transform: scale(1.03);
     }
 
     footer {
@@ -98,25 +76,6 @@
       margin-top: 2rem;
     }
 
-    /* Lightbox Styles */
-    .lightbox {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw; height: 100vh;
-      background: rgba(0,0,0,0.8);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-    }
-
-    .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 10px;
-      box-shadow: 0 0 20px #000;
-    }
-
     @media (max-width: 600px) {
       nav {
         flex-direction: column;
@@ -124,7 +83,7 @@
       }
 
       header h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
     }
   </style>
@@ -145,79 +104,27 @@
 
 <!-- Header -->
 <header>
-  <h1>Custom Balloons</h1>
-  <p>Floating fun for every celebration 🎈</p>
+  <h1>🎈 Balloon Creations</h1>
+  <p>Brighten any celebration with our custom balloon designs!</p>
 </header>
 
-<!-- Product Grid -->
-<div class="products">
-
-  <!-- Repeat this block for each balloon -->
-  <div class="product-card" onclick="openLightbox('images/Bal1.jpg')">
-    <img src="images/Bal1.jpg" alt="Balloon 1">
-    <h3>Pink Bouquet</h3>
-    <p>Perfect for birthdays, baby showers, or just to show some love!</p>
+<!-- Gallery Section -->
+<section>
+  <div class="gallery">
+    <img src="Bal1.jpg" alt="Balloon 1">
+    <img src="Bal2.jpg" alt="Balloon 2">
+    <img src="Bal3.jpg" alt="Balloon 3">
+    <img src="Bal4.jpg" alt="Balloon 4">
+    <img src="Bal5.jpg" alt="Balloon 5">
+    <img src="Bal6.jpg" alt="Balloon 6">
+    <img src="Bal7.jpg" alt="Balloon 7">
   </div>
-
-  <div class="product-card" onclick="openLightbox('images/Bal2.jpg')">
-    <img src="images/Bal2.jpg" alt="Balloon 2">
-    <h3>Happy Birthday Set</h3>
-    <p>Bright and bold balloon bundle that brings the party vibe!</p>
-  </div>
-
-  <div class="product-card" onclick="openLightbox('images/Bal3.jpg')">
-    <img src="images/Bal3.jpg" alt="Balloon 3">
-    <h3>Clear Confetti Balloon</h3>
-    <p>Filled with fun! Add a name or message for a personal touch.</p>
-  </div>
-
-  <div class="product-card" onclick="openLightbox('images/Bal4.jpg')">
-    <img src="images/Bal4.jpg" alt="Balloon 4">
-    <h3>Pastel Rainbow</h3>
-    <p>Soft colors for a dreamy display — loved for baby events.</p>
-  </div>
-
-  <div class="product-card" onclick="openLightbox('images/Bal5.jpg')">
-    <img src="images/Bal5.jpg" alt="Balloon 5">
-    <h3>Custom Text Bubble</h3>
-    <p>Your message, your way — clear balloons with sparkle inside.</p>
-  </div>
-
-  <div class="product-card" onclick="openLightbox('images/Bal6.jpg')">
-    <img src="images/Bal6.jpg" alt="Balloon 6">
-    <h3>Gold & Black Glam</h3>
-    <p>Stylish and bold — great for milestone birthdays and parties.</p>
-  </div>
-
-  <div class="product-card" onclick="openLightbox('images/Bal7.jpg')">
-    <img src="images/Bal7.jpg" alt="Balloon 7">
-    <h3>Balloon Stack</h3>
-    <p>Number or letter balloons stacked with flair — totally Insta-worthy!</p>
-  </div>
-
-</div>
-
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img" src="" alt="Zoomed Balloon">
-</div>
+</section>
 
 <!-- Footer -->
 <footer>
   &copy; 2025 Jo Gifts. All rights reserved.
 </footer>
-
-<!-- Script for Lightbox -->
-<script>
-  function openLightbox(imageSrc) {
-    document.getElementById('lightbox-img').src = imageSrc;
-    document.getElementById('lightbox').style.display = 'flex';
-  }
-
-  function closeLightbox() {
-    document.getElementById('lightbox').style.display = 'none';
-  }
-</script>
 
 </body>
 </html>
